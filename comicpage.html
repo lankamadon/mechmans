@@ -1,0 +1,174 @@
+<div class="box">
+    <h2 class="heading">Comic [v:comicnumber] - [v:comictitle]</h2>
+     <div class="afterheading">
+      <div id="comicdata">[v:posttime]
+       [c:usechapters] <!--comment:[this one checks if the webcomic uses chapters]-->
+        [c:haschapter] <!--comment:[this one checks if the comic strip is in a chapter]-->
+         in <a href="[v:chapterlink]">[v:chaptername]</a>
+        [/]
+       [/]
+      </div>
+      [c:allowratings]
+       <div id="comicrating">
+        <b>Average Rating:</b> [v:rating] <span id="votenumber">([v:votecount] votes)</span>
+        <a href="[v:ratelink]" onclick='window.open("[v:ratelink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;' id="ratelink">Rate this comic</a>
+       </div>
+      [/]
+       <div class="clear"></div>
+
+      <div id="comicimagewrap"> [c:comicnumber!=101][c:comicnumber!=later]
+    	[v:comicimage]
+    [/][/]
+    [c:comicnumber=101]
+    	<iframe width="560" height="315" src="https://www.youtube.com/embed/bbdmp25tKkY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    [/]
+    [c:comicnumber=later]
+    	code here
+    [/]</div>
+
+      <div id="comicnav">
+       <a href="/comics/first/" rel="start" class="comicnavlink"><img src="http://mechmans.webcomic.ws/files/website_layout/first.png" alt="&lt;&lt;First" /></a>
+       <a href="[v:prevcomic]" rel="prev" class="comicnavlink"><img src="http://mechmans.webcomic.ws/files/website_layout/previous.png" alt="&lt;Previous" /></a>
+
+       <!--comment:[comic dropdown:]-->
+          <select onchange="jumpTo(this.options[selectedIndex].value);" class="comicnavlink">
+         [l:chapteredarchive]
+          [c:l.newchapter]
+           <optgroup label="[v:l.chaptername]" />
+           [c:l.chapterid!=v:chapterid]
+             <option value="[v:l.comicurl]">Read from this Chapter</option>
+           [/]
+          [/]
+          [c:l.chapterid=v:chapterid]
+           <option value="[v:l.comicurl]" [c:l.currentcomic]selected="selected"[/]>[v:l.comictitle]</option>
+          [/]
+         [/]
+        </select>
+
+       <a href="[v:nextcomic]" rel="next" class="comicnavlink"><img src="http://mechmans.webcomic.ws/files/website_layout/next.png" alt="Next&gt;" /></a>
+       <a href="/comics/" rel="index" class="comicnavlink"><img src="http://mechmans.webcomic.ws/files/website_layout/latest.png" alt="Latest&gt;&gt;" /></a>
+
+      </div>
+      <div id="saveplace"><a href="#" onclick="savePlace(this,[v:comicid]);return false;">Save My Place</a> | <a href="#" onclick="loadPlace();return false;">Load My Place</a></div>
+
+     </div>
+
+    [c:authornotes]
+     <h2 class="heading">Author Notes:</h2>
+      <div class="afterheading">
+       <div id="authornotes">
+        [l:authornotes]
+
+           <div class="comment">
+            <div class="commentdata">
+             <span class="authordata">
+               <a href="[v:l.profilelink]"><b>[v:l.authorname]</b></a>
+             </span>
+             <span class="posttime">[v:l.posttime]</span>
+             <span class="commentcontrol [v:l.controlclass]">
+              <a href="[v:l.editlink]" class="[v:l.editclass]" onclick='window.open("[v:l.editlink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>edit</a>
+              <a href="[v:l.deletelink]" class="[v:l.deleteclass]" onclick='window.open("[v:l.deletelink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>delete</a>
+             </span>
+             <div class="clear"></div>
+            </div>
+            <div class="commentcontent">
+             [c:l.avatar]
+              <div class="avatar">
+               <img src="[v:l.avatar]" alt="[v:l.authorname]" /><br />
+              </div>
+             [/]
+             <span class="commenttext">
+              [v:l.comment]
+             </span>
+             <div class="clear"></div>
+            </div>
+           </div>
+        [/]
+      </div>
+     </div>
+    [/]
+
+
+    [c:showpermalinks]
+     <h2 class="heading">Permalinks:</h2>
+      <div class="afterheading">
+     <div class="permalinkbox">
+
+      <h3 class="permalinkhead">Copy this comic strip into LiveJournal, your blog or Myspace with this code:</h3>
+      <div class="permalinkcode">
+       &lt;a href=&quot;[v:permalink]&quot;>&lt;img src=&quot;[v:comicimageurl]&quot; alt=&quot;[v:webcomicname] - [v:comictitle]&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;
+       &lt;br /&gt;<br />&lt;a href=&quot;[v:permalink]&quot;&gt;[v:comictitle]&lt;/a&gt;
+      </div>
+     </div>
+     <div class="permalinkbox">
+
+      <h3 class="permalinkhead">Or into forums with this code:</b></h3>
+       <div class="permalinkcode">
+        [URL=[v:permalink]]	[IMG][v:comicimageurl][/IMG]	[/URL]<br />
+        [URL=[v:permalink]][v:comictitle][/URL]
+       </div>
+      </div>
+      </div>
+     [/]
+
+
+
+
+     [c:showcomments]
+      [c:comments]
+
+
+
+       <h2 class="heading">Comments:</h2>
+        <div class="afterheading">
+
+       [c:allowcomments]
+        <div class="postcomment"><a href="[v:commentlink]" onclick='window.open("[v:commentlink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>Post a Comment</a></div>
+        [c:!allowguestcomments]
+         (You have to be registered at <a href="http://comicfury.com">ComicFury</a> to leave a comment!)
+        [/]
+       [/]
+
+         <div class="comments">
+
+          [l:comments]
+           <div class="comment [c:l.is_reply]reply[/]">
+            <div class="commentdata">
+             <span class="authordata">
+               <a href="[v:l.profilelink]"><b>[v:l.authorname]</b></a>
+             </span>
+             <span class="posttime">[v:l.posttime]</span>
+             <span class="commentcontrol [v:l.controlclass]">
+              <a href="[v:l.editlink]" class="[v:l.editclass]" onclick='window.open("[v:l.editlink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>edit</a>
+              <a href="[v:l.deletelink]" class="[v:l.deleteclass]" onclick='window.open("[v:l.deletelink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>delete</a>
+              <a href="[v:l.replylink]" onclick='window.open("[v:l.replylink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>reply</a>
+             </span>
+             <div class="clear"></div>
+            </div>
+            <div class="commentcontent">
+             [c:l.avatar]
+              <div class="avatar">
+               <img src="[v:l.avatar]" alt="[v:l.authorname]" /><br />
+              </div>
+             [/]
+             <span class="commenttext">
+              [v:l.comment]
+             </span>
+             <div class="clear"></div>
+            </div>
+           </div>
+          [/]
+          <div class="clear"></div>
+        </div>
+       </div>
+
+      [/]
+     [/]
+        [c:allowcomments]
+         <div class="afterheading postcomment"><a href="[v:commentlink]" onclick='window.open("[v:commentlink]","edit","menubar=no,width=530,height=360,toolbar=no"); return false;'>Post a Comment</a></div>
+         [c:!allowguestcomments]
+          (You have to be registered at <a href="http://comicfury.com">ComicFury</a> to leave a comment!)
+         [/]
+        <br />
+        [/]
+</div>

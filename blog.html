@@ -1,0 +1,36 @@
+<div class="box">
+[c:hasblogs]
+ <h2 class="heading">Blogs:</h2>
+ <div class="afterheading">
+  <ul id="blogarchive">
+   <li class="bahead">Archive</li>
+   [l:blogarchive]
+    <li><a href="[v:l.bloglink]">[v:l.blogtitle]</a> by [v:l.authorname]</li>
+   [/]
+  </ul>
+
+  <div id="blogs">
+   [l:blogs]
+    <div class="blog">
+     <div class="blogdata">
+       <div class="blogauthor">by [v:l.authorname]</div>
+       <h3 class="blogtitle">[v:l.blogtitle]</h3>
+       <div class="clear"></div>
+     </div>
+     <div class="blogcontent">[v:l.blog]</div>
+    </div>
+   [/]
+  </div>
+
+  <div class="clear"></div>
+ </div>
+[/]
+
+
+[c:!hasblogs]
+ <h2 class="heading">Error:</h2>
+ <div class="afterheading">
+  <div id="errormessage">There are currently no blogs.</div>
+ </div>
+[/]
+</div>

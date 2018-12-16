@@ -1,0 +1,27 @@
+<div class="box">
+<h2 class="heading">Search</h2>
+<div class="afterheading">
+ <form method="post" action="/search/">
+  <div>
+   <input type="text" name="search" value="[v:searchterm]" id="bigsearchbox" />
+   <input type="submit" value="Search!" class="submit" />
+  </div>
+ </form>
+ [c:searched]
+  [c:!foundresults]
+   <div id="searchresultbox"><h3>Error</h3><div id="results"> Sorry, but there were no results for your search.</div></div>
+  [/]
+
+  [c:foundresults]
+   <div id="searchresultbox">
+    <h3>Results</h3>
+    <ul id="results">
+     [l:searchresults]
+      <li><a href="[v:l.comicurl]">[v:l.comictitle]</a> <span class="searchposttime">([v:l.posttime])</span></li>
+     [/]
+    </ul>
+   </div>
+  [/]
+ [/]
+</div>
+</div>

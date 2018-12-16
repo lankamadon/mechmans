@@ -1,0 +1,332 @@
+/*ie fixes:*/
+* html div, * html ul,* html li, * html span, * html li a {
+ height:1%;
+}
+
+*+ html div {
+ min-height:1px;
+}
+/*end ie fixes*/
+
+body {
+ background-image:url("http://mechmans.webcomic.ws/files/website_layout/background.png");
+ background-attachment: fixed;
+ font-family:"Gill Sans","Gill Sans MT",sans-serif;
+}
+#header,#navigation,h1,h2,h3,h4,h5,h6,#archive li.chaptertitle {
+ font-family:"Century Gothic","AppleGothic","MgOpen Modata","Avant Garde Gothic","Gill Sans","Gill Sans MT","Sarpanch","sans-serif";
+ color:#FFF;
+}
+h1,h2,h3,h4,h5,h6 {
+ margin:0;
+ font-weight:normal;
+ font: solid red;
+}
+h1,h2 {
+ margin:2px;
+ padding-bottom:2px;
+ padding-left:3px;
+ border-bottom:2px solid red;
+ margin-bottom:3px;
+}
+a {
+ text-decoration:none;
+}
+
+a:link {
+ color:#FF002C;
+}
+a:visited {
+ color:#FC7210;
+}
+a:hover {
+ color:#FF04DC;
+}
+
+#navigation a:link,#footer a:link {
+ color:#FF002C;
+ background-color:transparent;
+}
+#navigation a:hover,#navigation a:visited,#footer a:visited {
+ color:#FF002C;
+ background-color:transparent;
+}
+#cf_ads {
+ display:table;
+ margin:auto;
+ text-align:center;
+ float:left;
+}
+#footer a:hover {
+ color:#FF04DC;
+ background-color:transparent;
+}
+img {
+ border:0;
+}
+input,select {
+ color:#FF002C;
+ font-family:"Gill Sans","Gill Sans MT",sans-serif;
+ margin:0px;
+ vertical-align:middle;
+ background:transparent;
+}
+select {
+ width:350px; /*IE only*/
+ max-width:350px; /*for some reason, this doesn't work in IE7*/
+}
+*>/**/select {
+ width:auto !important; /*real browsers*/
+}
+.box {
+ background-color:transparent;
+ border:1px solid red;
+ border-bottom:3px solid red;
+ padding:5px;
+ margin-bottom:5px;
+ color:#000;
+}
+*>/**/#wrap {/*real browsers*/
+ display:table;
+ width:75%;
+ margin:auto;
+}
+#wraptable { /*>=ie7 conditional comment table*/
+ width:75%;
+ margin:auto;
+}
+#navigation {
+ text-align:right;
+ margin:0px;
+ padding:5px;
+ list-style:none;
+ margin-bottom:5px;
+ }
+#navigation li {
+ display:inline;
+}
+#navigation li a {
+ display:inline-block;
+ border:1px solid red;
+ margin:6px;
+ padding:10px;
+ padding-top:8px;
+ padding-bottom:8px;
+}
+#navigation li a:hover {
+ padding-top:5px;
+ padding-bottom:5px;
+ border-top:3px solid red;
+ border-bottom:3px solid red;
+ color:#FF04DC;
+}
+#header {
+/* filter:alpha(opacity=65);
+ -moz-opacity:0.65;
+ -khtml-opacity: 0.65;
+ opacity: 0.65;*/
+ border:1px solid red;
+ border-bottom:1px solid red;
+ color:#000;
+}
+#sitetitle {
+ font-size:50px;
+ color:#FFF;
+ margin:2px;
+ margin-right:10px;
+ margin-bottom:0;
+ display:inline;
+ border:0;
+ background:transparent;
+}
+#slogan {
+ font-family:Arial Narrow,sans-serif;
+ font-variant:small-caps;
+}
+#footer {
+ border:0px transparent;
+ border-bottom:0px transparent;
+ background-color:transparent;
+ padding:5px;
+ margin-bottom:5px;
+ color:#FFF;
+}
+.afterheading {
+ margin:20px;
+ margin-top:10px;
+ color:#FFF;
+}
+
+.reply {
+ margin-left:40px;
+ background-color:#FFE8EC;
+}
+.permalinkhead {
+ color:#FF002C;
+ padding:3px;
+ background-color:#FFE8EC;
+}
+.commentdata a:link, .commentdata a:visited {
+ color:#000;
+ background-color:#FFE8EC;
+}
+.commentdata a:hover {
+ font-style:italic;
+ color:#FF04DC;
+ background-color:#FFE8EC;
+}
+.comment,.permalinkbox,#searchresultbox {
+ border:2px solid red;
+ margin-bottom:10px;
+ margin-top:10px;
+ color:#000;
+ background-color:#FFE8EC;
+}
+.commentcontent, .permalinkbox {
+ padding:5px;
+ background-color:#FFE8EC;
+}
+.permalinkcode {
+ padding:3px;
+ font-family:"Lucida Console",Monaco,monospace;
+ font-size:12px;
+ color:#FF002C;;
+}
+.blogtitle {
+ float:left;
+ color:#FFF;
+ background-color:#FFE8EC;
+}
+.blogauthor {
+ float:right;
+ width:auto;
+ color:#000;
+ background-color:#FFE8EC;
+}
+.blogcontent {
+ padding:5px;
+ margin:0;
+ border-bottom:1px solid #EEE;
+ margin-bottom:1px;
+ background-color:#FFE8EC;
+}
+.clear {
+ clear:both;
+ visibility:hidden;
+ border:0;
+ line-height:0;
+ width:0;
+ height:0;
+}
+#latestcomic, #latestcomichead {
+ text-align:center;
+}
+#latestcomic img {
+ border:1px solid red;
+}
+.commentcontrol {
+ float:right;
+}
+.authordata,.posttime {
+ float:left;
+ margin-right:10px;
+}
+.posttime {
+ color:#000;
+}
+.avatar {
+ float:left;
+}
+#comicdata {
+ float:right;
+ color:#FFF;
+ margin-bottom:15px;
+}
+#comicrating {
+ color:#FFF;
+ float:left;
+ margin-bottom:15px;
+}
+#comicimagewrap img {
+ border:1px solid red;
+}
+#comicimagewrap,#comicnav {
+ text-align:center;
+ color:#FF002C;
+}
+.comicnavlink img {
+ margin-left:10px;
+ margin-right:10px;
+ vertical-align:middle;
+ color:#FF002C;
+}
+#comicnav {
+ vertical-align:middle;
+ color:#FFF;
+}
+#saveplace {
+ text-align:center;
+ margin:10px;
+ margin-bottom:5px;
+}
+#results {
+ margin:0px;
+ padding:5px;
+ list-style:none;
+ color:#FF002C;
+}
+#results li {
+ margin-left:10px;
+ padding:0px;
+}
+#blogs {
+ width:67%;
+ float:left;
+ margin:0;
+ padding:0;
+}
+#blogarchive {
+ margin:0px;
+ margin-top:10px;
+ width:27%;
+ float:right;
+ border:2px solid red;
+ padding:0;
+ padding:3px;
+}
+#blogarchive li {
+ list-style:none;
+ margin:0;
+ border-bottom:1px solid #CCC;
+ padding:2px;
+}
+#blogarchive .bahead {
+ color:#FF002C;
+ border:0;
+}
+#archive {
+ border:2px solid red;
+ padding:0;
+ margin:0;
+}
+#archive li {
+ list-style:square;
+ color:#FF002C;
+ margin-left:20px;
+ font-size:16px;
+ padding:1px;
+}
+#archive li.chaptertitle {
+ color:#FF002C;
+ list-style:none;
+ margin:0;
+ font-size:20px;
+ font-weight:normal;
+ padding:2px;
+}
+#archive li.chaptertitlesub {
+ list-style:none;
+ font-style:italic;
+ font-size:14px;
+ margin-left:5px;
+}

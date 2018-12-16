@@ -1,0 +1,36 @@
+<div class="box">
+ <h2 class="heading">[v:webcomicname] - Overview</h2>
+ [c:hascomics]
+  <div class="afterheading">
+   <h3 id="latestcomichead">Latest comic: [v:latestcomictitle]</h3>
+   <div id="latestcomic">
+    <a href="/comics/" id="latestcomiclink">[v:latestcomicimage]</a><br />
+   </div>
+  </div>
+ [/]
+
+ [c:hasblogs]
+  <h2 class="heading">Latest blogs:</h2>
+   <div class="afterheading">
+    [l:latestblogs]
+     <div class="blog">
+      <div class="blogdata">
+       <div class="blogauthor">by [v:l.authorname]</div>
+       <h3 class="blogtitle">[v:l.blogtitle]</h3>
+       <div class="clear"></div>
+      </div>
+      <div class="blogcontent">[v:l.blog]</div>
+     </div>
+    [/]
+   </div>
+ [/]
+
+ [c:!hascomics]
+  [c:!hasblogs]
+   <h3 class="heading">Error</h2>
+   <div class="afterheading">
+    This webcomic is empty right now. Why don't you check back later.
+   </div>
+  [/]
+ [/]
+</div>
